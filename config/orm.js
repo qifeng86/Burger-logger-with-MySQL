@@ -2,40 +2,39 @@ const connection = require("./connection.js");
 
 
 const orm = {
-    selectAll(tableName, callback) {
-        var query = 'SELECT * FROM burgers';
-        connection.query(
-            query,
-            [tableName, callback],
+    selectAll(callback) {
+        const query = 'SELECT * FROM burgers';
+        connection.query(query,
             (err, result) => {
                 if (err) throw err;
-                console.log(result);
+                callback(result);
             }
         );
     },
-    insertOne(tableName, callback) {
-        var query = 'INSERT INTO burgers SET ?';
-        connection.query(
-            query,
-            [tableName, callback],
-            (err, result) => {
-                if (err) throw err;
-                console.log(result);
-            }
-        );
-    },
-    updateOne(tableName, callback) {
-        var query =
-            'UPDATE burgers SET ?';
 
-        connection.query(
-            query,
-            [
-                tableName, callback
-            ],
+    insertOne: function (burger_name, callback) {
+        const query = 'INSERT INTO burgers SET ?';
+        connection.query(query, {
+            burger_name: burger_name,
+            devoured: 0,
+        },
             (err, result) => {
                 if (err) throw err;
-                console.log(result);
+                callback(result);
+            }
+        );
+    },
+    updateOne: function (id, callback) {
+        const query = 'UPDATE burgers SET ? WHERE ?';
+
+        connection.query(query,
+            {
+                devoured: 1,
+                id: id,
+            },
+            (err, result) => {
+                if (err) throw err;
+                callback(result);
             }
         );
     },
