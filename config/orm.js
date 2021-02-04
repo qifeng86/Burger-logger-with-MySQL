@@ -13,7 +13,7 @@ const orm = {
         );
     },
 
-    insertOne: function (burger_name, callback) {
+    insertOne(burger_name, callback) {
         const query = 'INSERT INTO burgers SET ?';
         connection.query(query, {
             burger_name: burger_name,
@@ -25,7 +25,7 @@ const orm = {
             }
         );
     },
-    updateOne: function (id, callback) {
+    updateOne(id, callback) {
         const query = 'UPDATE burgers SET ? WHERE ?';
 
         connection.query(query,
