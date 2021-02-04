@@ -1,8 +1,8 @@
 USE burgers_db;
 
 INSERT INTO burgers (burger_name, devoured)
-VALUE ("Cheese Burger", 0);
+VALUE ("Cheese Burger", FALSE);
 INSERT INTO burgers (burger_name, devoured)
-VALUE ("Veggie Burger", 0);
+VALUE ("Veggie Burger", FALSE);
 INSERT INTO burgers (burger_name, devoured)
-VALUE ("Double Patty Burger", 0);
+VALUE ("Double Patty Burger", FALSE);
