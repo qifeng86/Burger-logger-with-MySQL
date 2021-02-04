@@ -1,4 +1,4 @@
-//Import (require) connection.js into orm.js//
+//Import connection.js into orm.js//
 const connection = require("./connection.js");
 
 //create the methods that will execute the necessary MySQL commands in the controllers//
@@ -17,7 +17,7 @@ const orm = {
         const query = 'INSERT INTO burgers SET ?';
         connection.query(query, {
             burger_name: burger_name,
-            devoured: 0,
+            devoured: false,
         },
             (err, result) => {
                 if (err) throw err;
@@ -30,7 +30,7 @@ const orm = {
 
         connection.query(query,
             {
-                devoured: 1,
+                devoured: true,
                 id: id,
             },
             (err, result) => {
