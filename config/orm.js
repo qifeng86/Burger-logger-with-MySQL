@@ -29,10 +29,12 @@ const orm = {
         const query = 'UPDATE burgers SET ? WHERE ?';
 
         connection.query(query,
-            {
-                devoured: true,
-                id: id,
+            [{
+                devoured: true
             },
+            {
+                id: id
+            }],
             (err, result) => {
                 if (err) throw err;
                 callback(result);
