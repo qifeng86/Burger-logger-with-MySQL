@@ -15,3 +15,6 @@ connection.connect(function (err) {
     console.log("connected as id " + connection.threadId + "\n");
     questions();
 });
+
+//Export the connection//
+module.exports = connection;
