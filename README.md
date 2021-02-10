@@ -53,6 +53,9 @@ Qi Feng
 - MYSQL
 - Javascript
 - Node.js
+- Handlebars
+- HTML
+- Bootstrap
 - npm packages
   - express
   - mysql
