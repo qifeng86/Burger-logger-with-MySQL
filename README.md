@@ -42,8 +42,8 @@ https://ancient-tor-21604.herokuapp.com/
 
 This application is licensed under 
 
-[MIT](https://github.com/qifeng86/Burger-logger-with-MySQL/blob/main/LICENSE)
-[Heroku]()
+- [MIT](https://github.com/qifeng86/Burger-logger-with-MySQL/blob/main/LICENSE)
+- [Heroku]
 
 # Contributing
 
