@@ -1,6 +1,6 @@
-const mysql = require("mysql");
+var mysql = require("mysql");
 //const { connect } = require("../controllers/burgers_controller");//
-const connection;
+var connection;
 // create database connection with credentials//
 if (process.env.JAWSDB_URL) {
     connection = mysql.createConnection(process.env.JAWSDB_URL);
