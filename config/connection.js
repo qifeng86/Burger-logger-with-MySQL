@@ -1,5 +1,5 @@
 const mysql = require("mysql");
-const { connect } = require("../controllers/burgers_controller");
+//const { connect } = require("../controllers/burgers_controller");//
 const connection;
 // create database connection with credentials//
 if (process.env.JAWSDB_URL) {
