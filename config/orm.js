@@ -3,7 +3,7 @@ const connection = require("./connection.js");
 
 //create the methods that will execute the necessary MySQL commands in the controllers//
 const orm = {
-    selectAll(callback) {
+    all(callback) {
         const query = 'SELECT * FROM burgers';
         connection.query(query,
             (err, result) => {
@@ -13,11 +13,10 @@ const orm = {
         );
     },
 
-    insertOne(burger_name, callback) {
+    insert(burger_name, callback) {
         const query = 'INSERT INTO burgers SET ?';
         connection.query(query, {
             burger_name: burger_name,
-            devoured: false,
         },
             (err, result) => {
                 if (err) throw err;
@@ -25,12 +24,12 @@ const orm = {
             }
         );
     },
-    updateOne(id, callback) {
+    update(id, callback) {
         const query = 'UPDATE burgers SET ? WHERE ?';
 
         connection.query(query,
             [{
-                devoured: true
+                devoured: "1"
             },
             {
                 id: id

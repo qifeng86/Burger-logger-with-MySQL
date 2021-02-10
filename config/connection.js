@@ -1,7 +1,7 @@
 const mysql = require("mysql")
 
 // create database connection with credentials//
-var connection = mysql.createConnection({
+const connection = mysql.createConnection({
     host: "localhost",
 
     port: 3306,
@@ -11,7 +11,7 @@ var connection = mysql.createConnection({
 });
 
 connection.connect(function (err) {
-    if (err) throw err;
+
     console.log("connected as id " + connection.threadId + "\n");
 
 });

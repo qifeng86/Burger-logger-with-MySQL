@@ -1,27 +1,25 @@
 const express = require("express");
 const burger = require("../models/burger.js");
-
-
-// Create an instance of the express app.
 const router = express();
 
-//create routes//
+//index page//
 router.get('/', function (req, res) {
-    burger.selectAll(function (data) {
-        res.render('index', { burgers: data });
+    burger.all(function (data) {
+        res.render('', { burgers: data });
     });
 });
 
-router.post('/api/burgers', function (req, res) {
-    burger.insertOne(req.body.burger_name, function () {
-        res.redirect('index');
+//add a burger//
+router.post('/api/add', function (req, res) {
+    burger.insert(req.body.burger_name, function () {
+        res.redirect('/');
     });
 });
 
 
-router.put('/api/burgers/:id', function (req, res) {
-    burger.updateOne(req.params.id, function () {
-        res.redirect('index');
+router.post('/api/burgers/:id', function (req, res) {
+    burger.update(req.params.id, function () {
+        res.redirect('/');
     });
 });
 

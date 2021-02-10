@@ -3,20 +3,20 @@ const orm = require("../config/orm.js");
 
 //create the code that will call the ORM functions using burger specific input for the ORM//
 const burger = {
-    selectAll(callback) {
-        orm.selectAll(function (res) {
+    all(callback) {
+        orm.all(function (res) {
             callback(res);
         });
     },
 
-    insertOne(burger_name, callback) {
-        orm.insertOne(burger_name, function (res) {
+    insert(burger_name, callback) {
+        orm.insert(burger_name, function (res) {
             callback(res);
         });
     },
 
-    updateOne(id, callback) {
-        orm.updateOne(id, function (res) {
+    update(id, callback) {
+        orm.update(id, function (res) {
             callback(res);
         });
     }
