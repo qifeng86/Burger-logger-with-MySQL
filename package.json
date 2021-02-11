@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/qifeng86/burger.git"
+    "url": "git+https://github.com/qifeng86/Burger-logger-with-MySQL.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/qifeng86/burger/issues"
+    "url": "https://github.com/qifeng86/Burger-logger-with-MySQL/issues"
   },
-  "homepage": "https://github.com/qifeng86/burger#readme",
+  "homepage": "https://github.com/qifeng86/Burger-logger-with-MySQL#readme",
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
